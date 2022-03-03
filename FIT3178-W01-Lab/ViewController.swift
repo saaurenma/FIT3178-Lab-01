@@ -36,6 +36,11 @@ class ViewController: UIViewController {
             return
         }
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.format = "yyyy-MM-dd"
+        dateFormatter.locale = Locale.current
+        
+        
        // let newPerson = Person(newName: name, newAge: age)
         //displayMessage(title: "Hello", message: newPerson.greeting())
         return
