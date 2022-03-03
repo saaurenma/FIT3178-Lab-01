@@ -24,25 +24,39 @@ class ViewController: UIViewController {
     }
     
     
+    func stringToDate(stringDate:String) -> Date?{
+        // converts a string to a date object
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale = Locale.current
+    
+        guard let newDate = dateFormatter.date(from:stringDate) else {
+            // return nil when the provided date is invalid
+            return nil
+        }
+        
+        return newDate
+        
+    }
+    
+    
     @IBAction func sayHello(_ sender: Any) {
         guard let name = nameField.text, name.isEmpty == false else{
+            // name empty
             displayMessage(title: "Error", message: "Please enter a name")
             return
         }
         
-        guard let ageText = dateField.text, let age = Int(ageText) else {
-            // Age could not be established so print error and exit func
-            displayMessage(title: "Error", message: "Please enter a valid age")
+         
+        guard let dateText = dateField.text, let myDate = stringToDate(stringDate: dateText), myDate != nil else {
+            // Birthdate was not valid so print error and exit func
+            displayMessage(title: "Error", message: "Please enter a valid date of birth")
             return
         }
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.format = "yyyy-MM-dd"
-        dateFormatter.locale = Locale.current
-        
-        
-       // let newPerson = Person(newName: name, newAge: age)
-        //displayMessage(title: "Hello", message: newPerson.greeting())
+
+       let newPerson = Person(newName: name, newDate: myDate)
+        displayMessage(title: "Hello", message: newPerson.greeting())
         return
 
     

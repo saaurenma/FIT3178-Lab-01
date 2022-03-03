@@ -16,17 +16,20 @@ class Person: NSObject {
         birthDate = newDate
     }
     
+    
+    
     func greeting() -> String {
 
         let formatter = DateFormatter()
         formatter.locale = Locale.current
-        formatter.dateFormat = "MM/dd/yyyy"
+        formatter.dateFormat = "dd/MM/yyyy"
         let prettyDate = formatter.string(from: birthDate)
         
         
         
-        return "Hello " + name + ". You are " + prettyDate + " years old!"
-    
+        return "Hello \(name). You were born on \(prettyDate)."
+
     }
     
 }
+	

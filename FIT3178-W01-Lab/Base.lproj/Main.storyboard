@@ -69,7 +69,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Hello World" id="s5l-da-qmH"/>
                     <connections>
-                        <outlet property="ageField" destination="4em-t5-kGc" id="sJK-7V-Ssq"/>
+                        <outlet property="dateField" destination="4em-t5-kGc" id="sJK-7V-Ssq"/>
                         <outlet property="nameField" destination="dcv-Jm-iiL" id="O35-Qo-Ugb"/>
                     </connections>
                 </viewController>
