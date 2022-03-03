@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var ageField: UITextField!
+    @IBOutlet weak var dateField: UITextField!
     
     
     override func viewDidLoad() {
@@ -30,14 +30,14 @@ class ViewController: UIViewController {
             return
         }
         
-        guard let ageText = ageField.text, let age = Int(ageText) else {
+        guard let ageText = dateField.text, let age = Int(ageText) else {
             // Age could not be established so print error and exit func
             displayMessage(title: "Error", message: "Please enter a valid age")
             return
         }
         
-        let newPerson = Person(newName: name, newAge: age)
-        displayMessage(title: "Hello", message: newPerson.greeting())
+       // let newPerson = Person(newName: name, newAge: age)
+        //displayMessage(title: "Hello", message: newPerson.greeting())
         return
 
     

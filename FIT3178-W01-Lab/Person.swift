@@ -9,14 +9,18 @@ import UIKit
 
 class Person: NSObject {
     var name: String
-    var age: Int
+    var birthDate: Date
     
-    init(newName: String, newAge: Int){
+    init(newName: String, newDate: Date){
         name = newName
-        age = newAge
+        birthDate = newDate
     }
     
     func greeting() -> String {
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd/yyyy"
+        let prettyDate = date.
         
         return "Hello " + name + ". You are " + String(age) + " years old!"
     }
