@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        // the birthday should not exceed the current date
+        birthDatePicker.maximumDate = Date()
+        
     }
     
     func displayMessage(title: String, message: String){
@@ -41,9 +44,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func sayHello(_ sender: Any) {
-        // the birthday should not exceed the current date
-        birthDatePicker.maximumDate = Date()
-        
         guard let name = nameField.text, name.isEmpty == false else{
             // name empty
             displayMessage(title: "Error", message: "Please enter a name")
