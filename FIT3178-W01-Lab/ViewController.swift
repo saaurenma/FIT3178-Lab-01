@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var dateField: UITextField!
-    
+    @IBOutlet weak var birthDatePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func sayHello(_ sender: Any) {
+        // the birthday should not exceed the current date
+        birthDatePicker.maximumDate = Date()
+        
         guard let name = nameField.text, name.isEmpty == false else{
             // name empty
             displayMessage(title: "Error", message: "Please enter a name")
@@ -48,12 +51,13 @@ class ViewController: UIViewController {
         }
         
          
-        guard let dateText = dateField.text, let myDate = stringToDate(stringDate: dateText), myDate != nil else {
-            // Birthdate was not valid so print error and exit func
-            displayMessage(title: "Error", message: "Please enter a valid date of birth")
-            return
-        }
+//        guard let dateText = dateField.text, let myDate = stringToDate(stringDate: dateText), myDate != nil else {
+        let myDate = birthDatePicker.date
         
+            // Birthdate was not valid so print error and exit func
+    
+//        displayMessage(title: "Error", message: "Please enter a valid date of birth")
+//
 
        let newPerson = Person(newName: name, newDate: myDate)
         displayMessage(title: "Hello", message: newPerson.greeting())

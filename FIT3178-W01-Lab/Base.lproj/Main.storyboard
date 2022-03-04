@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kis-Uf-wih">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,28 +13,28 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FIT3178_W01_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uG4-da-SR3">
-                                <rect key="frame" x="20" y="108" width="350" height="21"/>
+                                <rect key="frame" x="20" y="64" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Birthday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFR-uH-jYO">
-                                <rect key="frame" x="20" y="191" width="350" height="21"/>
+                                <rect key="frame" x="20" y="147" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcv-Jm-iiL">
-                                <rect key="frame" x="20" y="137" width="350" height="34"/>
+                                <rect key="frame" x="20" y="93" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PT-Ez-Ya0">
-                                <rect key="frame" x="20" y="298" width="334" height="31"/>
+                                <rect key="frame" x="20" y="242" width="354" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Say Hello!"/>
                                 <connections>
@@ -42,19 +42,25 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY-MM-DD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4em-t5-kGc">
-                                <rect key="frame" x="20" y="232" width="350" height="34"/>
+                                <rect key="frame" x="20" y="176" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Fn3-1m-t4S">
+                                <rect key="frame" x="20" y="500" width="374" height="216"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dcv-Jm-iiL" firstAttribute="top" secondItem="uG4-da-SR3" secondAttribute="bottom" constant="8" id="2dd-Nk-nHj"/>
-                            <constraint firstItem="4em-t5-kGc" firstAttribute="top" secondItem="CFR-uH-jYO" secondAttribute="bottom" constant="20" id="6LZ-R3-jZt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fn3-1m-t4S" secondAttribute="trailing" constant="20" id="64w-nY-KeW"/>
+                            <constraint firstItem="4em-t5-kGc" firstAttribute="top" secondItem="CFR-uH-jYO" secondAttribute="bottom" constant="8" id="6LZ-R3-jZt"/>
                             <constraint firstItem="CFR-uH-jYO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6MG-Vu-Lt0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dcv-Jm-iiL" secondAttribute="trailing" constant="20" id="9QW-3h-ogM"/>
                             <constraint firstItem="uG4-da-SR3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Asq-nJ-dnV"/>
+                            <constraint firstItem="Fn3-1m-t4S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="C2W-0q-ctR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fn3-1m-t4S" secondAttribute="bottom" constant="20" id="Ccf-g6-xgM"/>
                             <constraint firstItem="5PT-Ez-Ya0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ksp-pw-qZ8"/>
                             <constraint firstItem="dcv-Jm-iiL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RMg-rg-jrD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5PT-Ez-Ya0" secondAttribute="trailing" constant="20" id="Ucf-ps-Ric"/>
@@ -69,6 +75,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Hello World" id="s5l-da-qmH"/>
                     <connections>
+                        <outlet property="birthDatePicker" destination="Fn3-1m-t4S" id="Bqa-yS-wa8"/>
                         <outlet property="dateField" destination="4em-t5-kGc" id="sJK-7V-Ssq"/>
                         <outlet property="nameField" destination="dcv-Jm-iiL" id="O35-Qo-Ugb"/>
                     </connections>
@@ -83,7 +90,7 @@
                 <navigationController title="Hello World" automaticallyAdjustsScrollViewInsets="NO" id="Kis-Uf-wih" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tsO-AP-dTK">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
